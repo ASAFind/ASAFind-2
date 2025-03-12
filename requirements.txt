@@ -1,0 +1,13 @@
+bio
+biopython
+biothings-client
+logomaker
+lxml
+matplotlib
+matplotlib-inline
+numpy
+pandas
+pandocfilters
+pickleshare
+Pillow
+zipp
