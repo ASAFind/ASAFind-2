@@ -1,7 +1,9 @@
 # ASAFind-2
-Latest version, with options for graphical output and ppc protein prediction
+Latest version, with options for graphical output and ppc protein prediction.
 
-Installation steps:
+Web service: https://asafind.jcu.cz/
+
+Local installation steps:
 
 * step into the directory where you want to make the installation e.g.
 cd /home/marta/asafind
