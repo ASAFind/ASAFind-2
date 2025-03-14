@@ -1,6 +1,6 @@
 
 ### ![ASAFind logo](ASAFind_logo_small.png "ASAFind logo")
-# ASAFind-2
+
 Latest version, with options for graphical output and ppc protein prediction.
 
 Web service: https://asafind.jcu.cz/
