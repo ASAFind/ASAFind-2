@@ -1,3 +1,4 @@
+[[https://github.com/ASAFind/ASAFind-2/blob/main/ASAFind_logo_small.png]]
 # ASAFind-2
 Latest version, with options for graphical output and ppc protein prediction.
 
