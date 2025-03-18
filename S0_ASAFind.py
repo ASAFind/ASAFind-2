@@ -1,12 +1,12 @@
 #! /usr/bin/env python
 #
-# This work is copyrhight 2024 Ansgar Gruber and Marta Vohnoutová, University of South Bohemia,
+# This work is copyrhight 2025 Ansgar Gruber and Marta Vohnoutová, University of South Bohemia,
 # and licenced under CC BY-SA 4.0 (Creative Commons Attribution-ShareAlike 4.0 International) licence,
 # available at: https://creativecommons.org/licenses/by-sa/4.0/
 #
-# For updates see our:
-# Repository on GitHub: https://github.com/ASAFind/ASAFind-2
+# For updates see our repository on GitHub: https://github.com/ASAFind/ASAFind-2
 # ASAFind web service: https://asafind.jcu.cz/
+# 
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
 # Marta Vohnoutová <mvohnoutova@prf.jcu.cz>
@@ -14,7 +14,7 @@
 
 
 
-VERSION = '2.0_beta26'
+VERSION = '2.0'
 PROJ = 'ASAFind'
 
 #import part
