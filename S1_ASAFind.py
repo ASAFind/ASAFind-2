@@ -1,13 +1,13 @@
 #! /usr/bin/env python
 #
-# This work is copyrhight 2024 Ansgar Gruber and Marta Vohnoutová, University of South Bohemia,
+# This work is copyrhight 2025 Ansgar Gruber and Marta Vohnoutová, University of South Bohemia,
 # and licenced under CC BY-SA 4.0 (Creative Commons Attribution-ShareAlike 4.0 International) licence,
 # available at: https://creativecommons.org/licenses/by-sa/4.0/
-# Main change is the inclusion of targeting predictions for the periplastidic compartment
+# 
 #
-# For updates see our:
-# Repository on GitHub: https://github.com/ASAFind/ASAFind-2
+# For updates see our repository on GitHub: https://github.com/ASAFind/ASAFind-2
 # ASAFind web service: https://asafind.jcu.cz/
+# 
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
 # Marta Vohnoutová <mvohnoutova@prf.jcu.cz>
@@ -18,10 +18,11 @@
 # available at: http://creativecommons.org/licenses/by-sa/3.0/
 # ASAFind2.py version 2.0_beta19 is accessible via the following url:
 # https://bitbucket.org/rocaplab/asafind/src/30f925e2684e1f9ee08df7af24df98bf5ee5fdb3/ASAFind2.py
+# Main change is the inclusion of targeting predictions for the periplastidic compartment
 #
 #
 
-VERSION = '2.0_beta24'
+VERSION = '2.0'
 PROJ = 'ASAFind'
 
 import sys
