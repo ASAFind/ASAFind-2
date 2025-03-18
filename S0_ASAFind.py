@@ -872,7 +872,7 @@ if logomaker_yes_no:  # argument -l activated Marta added
                 im_width=im.size[0]
                 im_height=im.size[1]
                 im.close()
-                bottom_image_path = f"rainbow_examples.png"
+                bottom_image_path = f"colour_code.png"
                 
                 #result= get_concat(all_images,im_width,im_height).save(f"{where_are_data}{organism}_logomaker/logo_{organism}_{df_cleavage_table.iloc[protein_iloc]['Protein ID']}_{df_cleavage_table.iloc[protein_iloc]['Hit ID']}.png")
                 result= get_concat(all_images,im_width,im_height,  bottom_image_path)
