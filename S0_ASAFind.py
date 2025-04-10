@@ -1,12 +1,12 @@
 #! /usr/bin/env python
 #
-# This work is copyrhight 2025 Ansgar Gruber and Marta Vohnoutová, University of South Bohemia,
+# This work is copyrhight 2024 Ansgar Gruber and Marta Vohnoutová, University of South Bohemia,
 # and licenced under CC BY-SA 4.0 (Creative Commons Attribution-ShareAlike 4.0 International) licence,
 # available at: https://creativecommons.org/licenses/by-sa/4.0/
 #
-# For updates see our repository on GitHub: https://github.com/ASAFind/ASAFind-2
+# For updates see our:
+# Repository on GitHub: https://github.com/martavohnoutova/ASAFind-Matrix-Creation/edit/main/README.md
 # ASAFind web service: https://asafind.jcu.cz/
-# 
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
 # Marta Vohnoutová <mvohnoutova@prf.jcu.cz>
@@ -14,7 +14,7 @@
 
 
 
-VERSION = '2.0'
+VERSION = '2.0_beta26'
 PROJ = 'ASAFind'
 
 #import part
@@ -68,7 +68,7 @@ from fill_constants import *
 print('In S0 program inside')
 
 if sys.version_info < (3, 10):
-    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.6
+    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.10
         and tested on python 3.10 It is not tested on Python version:
         {}.{}\n\n'''.format(sys.version_info[0], sys.version_info[1])))
 
@@ -86,7 +86,7 @@ after that character are ignored. Additionally, the fasta name may not contain a
 requirement is because SignalP converts characters in sequence names (e.g. '-' is changed to '_').
 ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by 
 SignalP. The output of this script is a tab delimited table. 
-Python >= 3.6 required.''',
+Python >= 3.10 required.''',
 formatter_class=argparse.RawDescriptionHelpFormatter)
 
 
@@ -872,7 +872,7 @@ if logomaker_yes_no:  # argument -l activated Marta added
                 im_width=im.size[0]
                 im_height=im.size[1]
                 im.close()
-                bottom_image_path = f"colour_code.png"
+                bottom_image_path = f"rainbow_examples.png"
                 
                 #result= get_concat(all_images,im_width,im_height).save(f"{where_are_data}{organism}_logomaker/logo_{organism}_{df_cleavage_table.iloc[protein_iloc]['Protein ID']}_{df_cleavage_table.iloc[protein_iloc]['Hit ID']}.png")
                 result= get_concat(all_images,im_width,im_height,  bottom_image_path)
