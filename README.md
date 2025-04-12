@@ -24,7 +24,8 @@ Using the GitHub function, you can either dowload the files as a zip archive, or
 
 It will create the environment called asafind_line_command including subdirectries temp and output, install all required packages activate it.
 
-<img src="{% static 'directories.png' %}" alt="Directories" width="700" >
+### ![ASAFind structure](directories.png "ASAFind structure")
+
 <br>
 
 <font color="#00c03a"> <h4>ASAFind 2.0</h4></font><br>
