@@ -29,7 +29,7 @@ The installation procedure will create the environment asafind\_command\_line, a
 
 The script S1\_ASAFind.py in the environment root directory performs the actual prediction. It is called from the script S0_ASAFind.py, which handles the options and generates the optional graphical output. Input data is a Fasta and a companion TargetP v.2.0 (or SignalP 3-5) short format tabular output file, with the complete TargetP header (two lines starting with '#'). Some versions of SignalP/TargetP truncate the sequence names. SignalP-3.0 to 20 characters, and 4.0, 4.1 to 58 characters. Therefore, ASAFind only considers the first corresponding characters of the fasta name (and the first 90 in the case of TargetP 2.0), which must be unique within the file. Parts of the fasta name after that character are ignored. Additionally, the fasta name may not contain a '-' or '|'. This requirement is because SignalP converts special characters in sequence names (e.g. '-' is changed to '\_'). ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by SignalP/TargetP. The output of this script is a tab delimited table. Python >= 3.10 is required.
 
-###python S0\_ASAFind.py --help**
+### python S0\_ASAFind.py --help
 
 |  |  |
 | --- | --- |
@@ -37,7 +37,7 @@ The script S1\_ASAFind.py in the environment root directory performs the actual 
 
 |  |  |
 | --- | --- |
-| -h, --help | show this help message and exit |
+| -h, --help | Show this help message and exit |
 | -f FASTA\_FILE, --fasta\_file FASTA\_FILE | Specify the input fasta FILE. |
 | -p SIGNALP\_FILE, --signalp\_file SIGNALP\_FILE | Specify the input TargetP FILE.. |
 | -s SIMPLE\_SCORE\_CUTOFF, --simple\_score\_cutoff SIMPLE\_SCORE\_CUTOFF | Optionally, specify an explicit score cutoff, rather than using ASAFind's default algorithm, not compatible with option -v1. The score given here will not be normalized and therefore should be obtained form a distribution of normalized scores. |
@@ -49,9 +49,9 @@ The script S1\_ASAFind.py in the environment root directory performs the actual 
 | -o OUT\_FILE, --out\_file OUT\_FILE | Specify the path and name of the output file you wish to create. Default will be the same as  the fasta\_file, but with a ".tab" suffix. |
 | -s\_ppc SCORE\_CUTOFF\_PPC, --score\_cutoff\_ppc SCORE\_CUTOFF\_PPC | Optionally, specify an explicit score cutoff for the ppc protein prediction, if given, ppc  protein prediction will be included. The score given here will not be normalized and therefore  should be obtained form a distribution of normalized scores. |
 | -t\_ppc SCORE\_TABLE\_FILE\_PPC, --score\_table\_file\_ppc SCORE\_TABLE\_FILE\_PPC | Optionally, specify a custom scoring table for the ppc protein prediction, if given, ppc  protein prediction will be included. The scoring table will be normalized with the maximum  score, which allows for processing of non-normalized as well as normalized scoring tables. |
-| -l {yes,no}, --logomaker {yes,no} | Choose "yes" or "no" (default: no). Optionally, from version 3.0 you can define with keyword  yes or no, if the program will generate also the logomaker pictures in .png and .svg formats.  They will be included into the output compressed package. |
+| -l, --logomaker | If chosen, the program will generate graphical output using logomaker, in .png and .svg formats. They will be included into the output compressed package. |
 | -my\_org MY\_ORGANISM, --my\_organism MY\_ORGANISM | Specify the name of organism. |
-| -v, --version | show program's version number and exit  | |
+| -v, --version | Show program's version number and exit. | |
 
 ### Example of run
 
