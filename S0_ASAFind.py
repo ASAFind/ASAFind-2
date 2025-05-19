@@ -128,7 +128,7 @@ parser.add_argument('-t_ppc', '--fasta_file_with_motifs_ppc',
                     help='Optionally, specify a custom scoring table for the ppc protein prediction, if given, ppc protein prediction will be included. The scoring table will be normalized with the maximum score, which allows for processing of non-normalized as well as normalized scoring tables.')
 
 parser.add_argument('-l', '--logomaker', action='store_true',
-                    help='If defined - the program will generate also the logomaker pictures in .png and .svg formats. They will be include into the output compressed package.')
+                    help='If defined - the program will generate also the logomaker pictures in .png and .svg formats. They will be included into the output compressed package.')
 
 parser.add_argument('-my_org', '--my_organism',
                     help='Specify the name of organism.',
