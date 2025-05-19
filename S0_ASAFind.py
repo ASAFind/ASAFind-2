@@ -68,8 +68,8 @@ from fill_constants import *
 print('In S0 program inside')
 
 if sys.version_info < (3, 10):
-    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.6
-        and tested on python 3.10 It is not tested on Python version:
+    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.10,
+        it is not tested on Python version:
         {}.{}\n\n'''.format(sys.version_info[0], sys.version_info[1])))
 
 #### Collect Input ####
@@ -86,7 +86,7 @@ after that character are ignored. Additionally, the fasta name may not contain a
 requirement is because SignalP converts characters in sequence names (e.g. '-' is changed to '_').
 ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by 
 SignalP. The output of this script is a tab delimited table. 
-Python >= 3.6 required.''',
+Python >= 3.10 required.''',
 formatter_class=argparse.RawDescriptionHelpFormatter)
 
 
