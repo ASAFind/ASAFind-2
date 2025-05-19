@@ -43,8 +43,8 @@ import pickle
 
 # Check Python version
 if sys.version_info < (3, 10):
-    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.6
-        and tested on python 3.10 It is not tested on Python version:
+    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.10,
+        it is not tested on Python version:
         {}.{}\n\n'''.format(sys.version_info[0], sys.version_info[1])))
 
 #### Collect Input ####
@@ -515,17 +515,20 @@ try:
     if problem_names:
         print('Problem names: ', problem_names)
         raise ValueError('''SignalP changes "-" and "|" characters in names to "_", therefore
-            ASAFind does not allow those characters either.''')
+            ASAFind does not allow those characters either. Therefore, these files cannot be analysed, please change the sequence names so that
+they match between the files.''')
 
     if not len(records_keys_short) == len(set(records_keys_short)):
         dups = tuple(set([x for x in records_keys_short if records_keys_short.count(x) > 1]))
         raise ValueError(inspect.cleandoc(f'''The input fasta has records that are not unique to the
-            first {signalps['character_limit']} characters. The offending records begin: {dups}'''))
+            first {signalps['character_limit']} characters.  Therefore, these files cannot be analysed, please change the sequence names so that
+each name in the FASTA file is unique, and that the names match between the files. The offending records begin: {dups}'''))
 
     if not set(signalps.keys()) >= set(records_keys_short):
         missing_entries = [x for x in set(records_keys_short) - set(signalps.keys())]
         raise ValueError(inspect.cleandoc(f'''SignalP/TargetP file does not have an entry (unique to first
-            {signalps['character_limit']} characters) for every sequence in fasta file. Missing
+            {signalps['character_limit']} characters) for every sequence in fasta file. Therefore, these files cannot be analysed, please change the SignalP/TargetP file so that
+it contains exactly one prediction for each sequence in the FASTA file, with matching sequence names between the files. Missing
             entry for {missing_entries}'''))
 except Exception as e:
     print(f'The SignalP/TargetP file could not be validated. The error is:\n{e}')
