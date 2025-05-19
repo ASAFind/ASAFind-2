@@ -7,7 +7,8 @@
 #  
 # For updates see our repository on GitHub: https://github.com/ASAFind/ASAFind-2
 # ASAFind web service: https://asafind.jcu.cz/
-# 
+# Publication: https://doi.org/10.1111/tpj.70138 (please cite if you publish results of the scripts, or derivative work)
+#
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
 # Marta Vohnoutová <mvohnoutova@prf.jcu.cz>
@@ -22,7 +23,7 @@
 #
 
 
-VERSION = '1.0_beta5'
+VERSION = '1.0'
 PROJ = 'Score_Table'
 
 import sys

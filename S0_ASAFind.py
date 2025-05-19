@@ -6,6 +6,7 @@
 #
 # For updates see our repository on GitHub: https://github.com/ASAFind/ASAFind-2
 # ASAFind web service: https://asafind.jcu.cz/
+# Publication: https://doi.org/10.1111/tpj.70138 (please cite if you publish results of the scripts, or derivative work)
 # 
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
@@ -15,7 +16,7 @@
 
 
 VERSION = '2.0'
-PROJ = 'ASAFind'
+PROJ = 'ASAFind_graphics'
 
 #import part
 import logomaker

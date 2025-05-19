@@ -7,6 +7,7 @@
 #
 # For updates see our repository on GitHub: https://github.com/ASAFind/ASAFind-2
 # ASAFind web service: https://asafind.jcu.cz/
+# Publication: https://doi.org/10.1111/tpj.70138 (please cite if you publish results of the scripts, or derivative work)
 # 
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
@@ -854,7 +855,7 @@ if signalps['signalp_version'] == 'TargetP-2.0':
     print(f'''{signalps['signalp_version']} predicted a mitochondrial transit peptide in {targetp_mtp} proteins, and location = "OTHER" for {targetp_other} proteins''')
 
 
-print('''\nCitation: If you use ASAFind in your research please cite our publication (Gruber et al., 2025, doi:10.1111/tpj.70138) as well as the appropriate publication for SignalP or TargetP, you used ''')
+print('''\nCitation: If you use ASAFind in your research please cite our publication (Gruber et al., 2025, doi:10.1111/tpj.70138) as well as the appropriate publications for SignalP or TargetP, you used ''')
 
 if 'SignalP-5' in signalps['signalp_version']:
     print('SignalP 5.0, (Almagro Armenteros et al. 2019, doi: 10.1038/s41587-019-0036-z)')
