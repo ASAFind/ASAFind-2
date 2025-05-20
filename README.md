@@ -39,14 +39,14 @@ The script S1\_ASAFind.py in the environment root directory performs the actual 
 | -h, --help | Show this help message and exit |
 | -f FASTA\_FILE, --fasta\_file FASTA\_FILE | Specify the input fasta FILE. |
 | -p SIGNALP\_FILE, --signalp\_file SIGNALP\_FILE | Specify the input TargetP FILE.. |
-| -s SIMPLE\_SCORE\_CUTOFF, --simple\_score\_cutoff SIMPLE\_SCORE\_CUTOFF | Optionally, specify an explicit score cutoff, rather than using ASAFind's default algorithm, not compatible with option -v1. The score given here will not be normalized and therefore should be obtained form a distribution of normalized scores. |
+| -s SIMPLE\_SCORE\_CUTOFF, --simple\_score\_cutoff SIMPLE\_SCORE\_CUTOFF | Optionally, specify an explicit score cutoff, rather than using ASAFind's default algorithm, not compatible with option -v1. The score given here will not be normalized and therefore should be obtained from a distribution of normalized scores. |
 | -t FASTA\_FILE\_WITH\_MOTIFS, --fasta\_file\_with\_motifs FASTA\_FILE\_WITH\_MOTIFS | Optionally, specify a custom scoring table. The scoring table will be normalized with the maximum score, which allows for processing of non-normalized as well as normalized scoring tables. |
 | -w, --web\_output | Format output for web display. This is mostly useful when called by a web app. |
 | -v1, --reproduce\_ASAFind\_1 | Reproduce ASAFind 1.x scores and results (non-normalized scores, if no custom scoring table is  specified, the original default scoring table generated without small sample size correction  will be used, not compatible with option -s). |
 | -ppc, --include\_ppc\_prediction | Include prediction of proteins that might be targeted to the periplastidic compartment. |
 | -t SCORE\_TABLE\_FILE, --score\_table\_file SCORE\_TABLE\_FILE | Optionally, specify a custom scoring table. The scoring table will be normalized with the  maximum score, which allows for processing of non-normalized as well as normalized scoring  tables. |
 | -o OUT\_FILE, --out\_file OUT\_FILE | Specify the path and name of the output file you wish to create. Default will be the same as  the fasta\_file, but with a ".tab" suffix. |
-| -s\_ppc SCORE\_CUTOFF\_PPC, --score\_cutoff\_ppc SCORE\_CUTOFF\_PPC | Optionally, specify an explicit score cutoff for the ppc protein prediction, if given, ppc  protein prediction will be included. The score given here will not be normalized and therefore  should be obtained form a distribution of normalized scores. |
+| -s\_ppc SCORE\_CUTOFF\_PPC, --score\_cutoff\_ppc SCORE\_CUTOFF\_PPC | Optionally, specify an explicit score cutoff for the ppc protein prediction, if given, ppc  protein prediction will be included. The score given here will not be normalized and therefore should be obtained from a distribution of normalized scores. |
 | -t\_ppc SCORE\_TABLE\_FILE\_PPC, --score\_table\_file\_ppc SCORE\_TABLE\_FILE\_PPC | Optionally, specify a custom scoring table for the ppc protein prediction, if given, ppc  protein prediction will be included. The scoring table will be normalized with the maximum  score, which allows for processing of non-normalized as well as normalized scoring tables. |
 | -l, --logomaker | If chosen, the program will generate graphical output using logomaker, in .png and .svg formats. They will be included into the output compressed package. |
 | -my\_org MY\_ORGANISM, --my\_organism MY\_ORGANISM | Specify the name of organism. |
@@ -62,4 +62,4 @@ The results are zipped and can be found in the folder 'output'. This command in 
 
 * python S1\_ASAFind.py -f example.fasta -p SignalP5_example_output.txt
 
-In this case, the result table can be found in the same directory from which the script is called (in this example the file name will be 'example.tab'), a log file with a summary can be found in the folder 'temp'.
+In this case, the result table can be found in the same directory from which the script is called (in this example the file name will be 'example.tab'), a log file with a summary can be found in the folder 'temp'. Example SignalP output files are also provided for SignalP 4.1 and SignalP 3, these can be used analogously.

@@ -99,7 +99,7 @@ parser.add_argument('-p', '--signalp_file',
 
 parser.add_argument('-s', '--simple_score_cutoff', default=None, type=float,
                     help='Optionally, specify an explicit score cutoff, rather than '
-                    'using ASAFind\'s default algorithm, not compatible with option -v1. The score given here will not be normalized and therefore should be obtained form a distribution of normalized scores.')
+                    'using ASAFind\'s default algorithm, not compatible with option -v1. The score given here will not be normalized and therefore should be obtained from a distribution of normalized scores.')
 
 parser.add_argument('-t', '--fasta_file_with_motifs',
                     help='Optionally, specify a custom scoring table. The scoring table will be normalized with the maximum score, which allows for processing of non-normalized as well as normalized scoring tables.',
@@ -122,7 +122,7 @@ parser.add_argument('-ppc', '--include_ppc_prediction', action='store_true',
                     help='Include prediction of proteins that might be targeted to the periplastidic compartment.')
 
 parser.add_argument('-s_ppc', '--score_cutoff_ppc', default=None, type=float,
-                    help='Optionally, specify an explicit score cutoff for the ppc protein prediction, if given, ppc protein prediction will be included. The score given here will not be normalized and therefore should be obtained form a distribution of normalized scores.')
+                    help='Optionally, specify an explicit score cutoff for the ppc protein prediction, if given, ppc protein prediction will be included. The score given here will not be normalized and therefore should be obtained from a distribution of normalized scores.')
 
 parser.add_argument('-t_ppc', '--fasta_file_with_motifs_ppc',
                     help='Optionally, specify a custom scoring table for the ppc protein prediction, if given, ppc protein prediction will be included. The scoring table will be normalized with the maximum score, which allows for processing of non-normalized as well as normalized scoring tables.')
