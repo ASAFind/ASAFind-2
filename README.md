@@ -74,6 +74,7 @@ If you use ASAFind in your research please cite our publication (Gruber et al., 
 Further information on the biological background and on strategies for pre-sequence identification can be found in the following publications: 
 
 * Gruber and Kroth 2024, <https://doi.org/10.1007/978-3-031-57446-7_15>
+* Gruber et al. 2020, <https://doi.org/10.48550/arXiv.2303.02509> (Comparative evaluation of statistical performance)
 * Gruber and Kroth 2017, <https://doi.org/10.1098/rstb.2016.0402>
-* Gruber et al., 2015, <https://doi.org/10.1111/tpj.12734> (original puplication of ASAFind)
+* Gruber et al., 2015, <https://doi.org/10.1111/tpj.12734> (Original puplication of ASAFind)
 * Gruber and Kroth 2014, <https://doi.org/10.1007/978-1-62703-661-0_12>
