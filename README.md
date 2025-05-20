@@ -26,7 +26,7 @@ The installation procedure will create the environment asafind\_command\_line, a
 
 ### ASAFind 2.0
 
-The script S1\_ASAFind.py in the environment root directory performs the actual prediction. It is called from the script S0_ASAFind.py, which handles the options and generates the optional graphical output. Input data is a Fasta and a companion TargetP v.2.0 (or SignalP 3-5) short format tabular output file, with the complete TargetP header (two lines starting with '#'). Some versions of SignalP/TargetP truncate the sequence names. SignalP-3.0 to 20 characters, and 4.0, 4.1 to 58 characters. Therefore, ASAFind only considers the first corresponding characters of the fasta name (and the first 90 in the case of TargetP 2.0), which must be unique within the file. Parts of the fasta name after that character are ignored. Additionally, the fasta name may not contain a '-' or '|'. This requirement is because SignalP converts special characters in sequence names (e.g. '-' is changed to '\_'). ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by SignalP/TargetP. The output of this script is a tab delimited table, the log files, the results table and if requested the graphical output are zipped and can be found in the folder 'output'. Please save the results in a different location; each new run of ASAFind will overwrite the content of the folder 'output'. Python >= 3.10 is required.
+The script S1\_ASAFind.py in the environment root directory performs the actual prediction. It is called from the script S0_ASAFind.py, which handles the options and generates the optional graphical output. Input data is a Fasta and a companion TargetP v.2.0 short format tabular output file, with the complete TargetP header (two lines starting with '#'). Some versions of SignalP/TargetP truncate the sequence names. SignalP-3.0 to 20 characters, and 4.0, 4.1 to 58 characters. Therefore, ASAFind only considers the first corresponding characters of the fasta name (and the first 90 in the case of TargetP 2.0), which must be unique within the file. Parts of the fasta name after that character are ignored. Additionally, the fasta name may not contain a '-' or '|'. This requirement is because SignalP/TargetP converts special characters in sequence names (e.g. '-' is changed to '\_'). ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by SignalP/TargetP. The basic output of ASAFind is a tab delimited table containing the results for each sequence in the FASTA input file. The results table, the log files, and if requested the graphical output are zipped and can be found in the folder 'output'. In the current version, graphical output can only be generated for predictions generated from TargetP 2 output. Please save the results in a different location; each new run of ASAFind will overwrite the content of the folder 'output'. Python >= 3.10 is required.
 
 ### python S0\_ASAFind.py --help
 
@@ -52,6 +52,14 @@ The script S1\_ASAFind.py in the environment root directory performs the actual 
 | -my\_org MY\_ORGANISM, --my\_organism MY\_ORGANISM | Specify the name of organism. |
 | -v, --version | Show program's version number and exit. | |
 
-### Example of run
+### Usage
 
-python S0\_ASAFind.py -f example.fasta -p example_summary.targetp2 -l
+When using TargetP 2 output files, this example can be used for a test run using the supplied example files:
+
+* python S0\_ASAFind.py -f example.fasta -p example_summary.targetp2 -l
+
+The results are zipped and can be found in the folder 'output'. This command in the current version only works with TargetP 2 output. If you would like to use ASAFind in conjuction with SignalP 3-5, use this command instead:
+
+* python S1\_ASAFind.py -f example.fasta -p SignalP5_example_output.txt
+
+In this case, the result table can be found in the same directory from which the script is called (in this example the file name will be 'example.tab'), a log file with a summary can be found in the folder 'temp'.
