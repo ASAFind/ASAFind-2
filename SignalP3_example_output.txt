@@ -1,0 +1,12 @@
+# SignalP-NN euk predictions                                   	                # SignalP-HMM euk predictions
+# name                Cmax  pos ?  Ymax  pos ?  Smax  pos ?  Smean ?  D     ? 	# name      !  Cmax  pos ?  Sprob ?
+Phatr3_J20657.t1      0.478  37 Y  0.628  37 Y  0.988  33 Y  0.458 N  0.543 Y	Phatr3_J20657.t1  S  0.453  37 N  0.701 Y  
+Phatr3_J2793.t1       0.482  29 Y  0.523  29 Y  0.981  11 Y  0.875 Y  0.699 Y	Phatr3_J2793.t1  S  0.556  29 Y  0.904 Y  
+Phatr3_EG02276.t1     1.000  25 Y  0.752  25 Y  0.937   6 Y  0.722 Y  0.737 Y	Phatr3_EG02276.t1  S  0.989  25 Y  1.000 Y  
+Phatr3_EG02643.t1     0.623  22 Y  0.715  22 Y  0.995   2 Y  0.904 Y  0.810 Y	Phatr3_EG02643.t1  S  0.995  22 Y  1.000 Y  
+Phatr3_J8982.t1       0.657  27 Y  0.076  42 N  0.701  32 N  0.209 N  0.142 N	Phatr3_J8982.t1  Q  0.286  27 N  0.323 N  
+Phatr3_J45997.t1      0.598  28 Y  0.065  14 N  0.117   8 N  0.071 N  0.068 N	Phatr3_J45997.t1  Q  0.000  50 N  0.000 N  
+Seq_too_short_with_s  0.331  26 Y  0.502  26 Y  0.982   4 Y  0.853 Y  0.678 Y	Seq_too_short_with_signal_peptide  S  0.912  26 Y  0.998 Y  
+Seq_too_short         0.009  13 N  0.017   3 N  0.056   1 N  0.045 N  0.031 N	Seq_too_short  Q  0.000   0 N  0.000 N  
+Seq_in_scored_region  0.331  26 Y  0.498  26 Y  0.981   4 Y  0.850 Y  0.674 Y	Seq_in_scored_region_forbidden_aa_code  S  0.910  26 Y  0.998 Y  
+Seq_outside_scored_r  0.331  26 Y  0.497  26 Y  0.981   4 Y  0.848 Y  0.672 Y	Seq_outside_scored_region_forbidden_aa_code  S  0.909  26 Y  0.998 Y  

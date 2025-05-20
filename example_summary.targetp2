@@ -1,0 +1,12 @@
+# TargetP-2.0	Organism: Non-Plant	Timestamp: 20250520121618
+# ID	Prediction	noTP	SP	mTP	CS Position
+Phatr3_J20657.t1	SP	0.147012	0.644926	0.208062	CS pos: 36-37. ASA-FT. Pr: 0.5740
+Phatr3_J2793.t1	SP	0.139912	0.856899	0.003190	CS pos: 28-29. IQA-WI. Pr: 0.6939
+Phatr3_EG02276.t1	SP	0.016608	0.975901	0.007491	CS pos: 24-25. VHA-RP. Pr: 0.9549
+Phatr3_EG02643.t1	SP	0.000165	0.999397	0.000438	CS pos: 21-22. IRA-EE. Pr: 0.9552
+Phatr3_J8982.t1	mTP	0.468999	0.027768	0.503233	CS pos: 39-40. RQF-SS. Pr: 0.6885
+Phatr3_J45997.t1	noTP	0.999492	0.000116	0.000392	
+Seq_too_short_with_signal_peptide	SP	0.000077	0.999923	0.000000	CS pos: 25-26. DEA-ND. Pr: 0.3111
+Seq_too_short	SP	0.463165	0.531943	0.004892	CS pos: ?. Probable protein fragment
+Seq_in_scored_region_forbidden_aa_code	SP	0.012574	0.987417	0.000009	CS pos: 24-25. IDE-AN. Pr: 0.2936
+Seq_outside_scored_region_forbidden_aa_code	SP	0.011942	0.988050	0.000008	CS pos: 24-25. IDE-AN. Pr: 0.2986

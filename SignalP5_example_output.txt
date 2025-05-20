@@ -1,0 +1,12 @@
+# SignalP-5.0	Organism: Eukarya	Timestamp: 20250520122356
+# ID	Prediction	SP(Sec/SPI)	OTHER	CS Position
+Phatr3_J20657.t1	OTHER	0.463406	0.536594	
+Phatr3_J2793.t1	OTHER	0.472083	0.527917	
+Phatr3_EG02276.t1	SP(Sec/SPI)	0.959788	0.040212	CS pos: 24-25. VHA-RP. Pr: 0.8767
+Phatr3_EG02643.t1	SP(Sec/SPI)	0.997334	0.002666	CS pos: 21-22. IRA-EE. Pr: 0.9299
+Phatr3_J8982.t1	OTHER	0.004552	0.995448	
+Phatr3_J45997.t1	OTHER	0.001676	0.998324	
+Seq_too_short_with_signal_peptide	SP(Sec/SPI)	0.957035	0.042965	CS pos: 25-26. DEA-ND. Pr: 0.3087
+Seq_too_short	OTHER	0.032070	0.967930	
+Seq_in_scored_region_forbidden_aa_code	SP(Sec/SPI)	0.964486	0.035514	CS pos: 25-26. DEA-ND. Pr: 0.3327
+Seq_outside_scored_region_forbidden_aa_code	SP(Sec/SPI)	0.961601	0.038399	CS pos: 25-26. DEA-ND. Pr: 0.3148
