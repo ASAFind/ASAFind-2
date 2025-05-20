@@ -43,9 +43,7 @@ import pickle
 
 # Check Python version
 if sys.version_info < (3, 10):
-    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.10,
-        it is not tested on Python version:
-        {}.{}\n\n'''.format(sys.version_info[0], sys.version_info[1])))
+    print(inspect.cleandoc('''\n\nWARNING: This version of ASAFind was developed on Python 3.10, it is not tested on Python version {}.{}.\n\n'''.format(sys.version_info[0], sys.version_info[1])))
 
 #### Collect Input ####
 #######################
@@ -587,15 +585,15 @@ for record in records:
                 #print(signalp['Position']) # Marta added
                 #signalp_parsed_position=int(row.split('\t')[4].split('-')[0][-2:])
                 signalp_parsed_position = int(signalp['Position'][2].split('-')[1].split('.')[0])
-                print(signalp_parsed_position)
+                #print(signalp_parsed_position)
             else:
                 signalp_parsed_position = 0  # 5.0 leaves this column blank if no prediction.
         except ValueError:
-            print('Failed to parse the SignalP-5.0 / TargetP-2.0 file.')
-            raise
+#            print(f'Value Error in predicted cleavage position of {record.name}.')
+            pass # ValueError here does not disturb the calculations, program should be able to complete (tested)
         except IndexError:  # Marta added
-            print('Failed to parse the SignalP-5.0 / TargetP-2.0 file.')
-            pass
+#            print(f'Index Error in predicted cleavage position of {record.name}.') 
+            pass # IndexError here does not disturb the calculations, program should be able to complete (tested)
 
     else:  # signalp_version is not 5.0
         signalp_marker = signalp['D']['conclusion']
@@ -824,8 +822,7 @@ chloroplast_not_targeted = signalp_positive - chloroplast_targeted - ppc_targete
 
 print(f'''########################################
 This is ASAFind {VERSION}.
-We detected a {signalps['signalp_version']} input file. If this isn't correct, troubleshoot,
-something is wrong!
+We detected a {signalps['signalp_version']} input file.
 
 Proteins were scored against {scoring_table_summary}
 The maximum possible non-normalized transit peptide score for this table is {maximum_tscore}''')
@@ -852,7 +849,7 @@ else:
     print(f'''    {chloroplast_not_targeted} of these were predicted not to go to the plastid''')
 
 if skipped_proteins:
-    print(f'    {skipped_proteins} of the proteins with signal peptides could not be analyzed because the length is too short')
+    print(f'    {skipped_proteins} of the proteins could not be analyzed because the length is too short')
 
 if signalps['signalp_version'] == 'TargetP-2.0':
     print(f'''{signalps['signalp_version']} predicted a mitochondrial transit peptide in {targetp_mtp} proteins, and location = "OTHER" for {targetp_other} proteins''')

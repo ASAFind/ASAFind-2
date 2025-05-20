@@ -162,9 +162,10 @@ allowed_graphics=['Plastid, high confidence', 'Plastid, low confidence','PPC','N
 #########################
 
 fasta_all_path = args.fasta_file
+signalp_all_path = args.signalp_file
 
 (fasta_file_path, fasta_file_name) = os.path.split(fasta_all_path)
-(signalp_file_path, signalp_file_name) = os.path.split(signalp_file)
+(signalp_file_path, signalp_file_name) = os.path.split(signalp_all_path)
 
 if args.my_organism:  # organism name arg is not obligatory
     my_organism = args.my_organism
@@ -255,7 +256,7 @@ print('-s parameter',args.simple_score_cutoff,type(args.simple_score_cutoff))
 ###############################################################
 # before logomaker we need to check the fasta file or the pandas table
 
-# desired_columns_logo2 = list('ACDEFGHIKLMNPQRSTVWY')
+desired_columns_logo2 = list('ACDEFGHIKLMNPQRSTVWY')
 scoring_background_matrixes = []  # list of scoring matrixes for background
 fasta_background_files=[] # list of fasta files for background
 if not args.include_ppc_prediction and not args.fasta_file_with_motifs and not args.fasta_file_with_motifs_ppc:

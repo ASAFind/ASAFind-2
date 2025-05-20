@@ -8,16 +8,15 @@ For local installation, a command line version of ASAFind can be downloaded from
 
 ### Installation steps
 
-Using the GitHub function, you can either dowload the files as a zip archive, or you can clone the repository using the provided URL. After download of the latest version, follow these installation steps:
+Using the GitHub function, you can either dowload the files as a zip archive, or you can clone the repository using the provided URL. ASAFind requires a Unix-based operating system like Linux (Ubuntu) or macOS. After download of the latest version, follow these installation steps on a command-line shell:
 
-* Step into the directory where you want to make the installation e.g.
+* Step into the directory where you want to make the installation e.g.:
     - cd /home/marta/asafind
-* Make a clone of the GitHub
-    - git clone https://github.com/ASAFind/ASAFind-2.git
-* Run the following commands from the command line:
-    - python3 -m venv asafind\_command\_line . asafind\_command\_line/bin/activate
+* Make a clone of the GitHub (if git is installed: "git clone https://github.com/ASAFind/ASAFind-2.git"), or place the content of the downloaded zip archive in the folder. 
+* Run the following commands:
+    - python3 -m venv asafind\_command\_line 
+    - . asafind\_command\_line/bin/activate
     - pip install --upgrade pip
-    - cd ASAFind-2/
     - pip install -r requirements.txt
 * Now you are in a virtual environment named asafind\_command\_line. Here you can run the scripts or ask for help e.g.:
     - python3 S0\_ASAFind.py --help
@@ -27,7 +26,7 @@ The installation procedure will create the environment asafind\_command\_line, a
 
 ### ASAFind 2.0
 
-The script S1\_ASAFind.py in the environment root directory performs the actual prediction. It is called from the script S0_ASAFind.py, which handles the options and generates the optional graphical output. Input data is a Fasta and a companion TargetP v.2.0 (or SignalP 3-5) short format tabular output file, with the complete TargetP header (two lines starting with '#'). Some versions of SignalP/TargetP truncate the sequence names. SignalP-3.0 to 20 characters, and 4.0, 4.1 to 58 characters. Therefore, ASAFind only considers the first corresponding characters of the fasta name (and the first 90 in the case of TargetP 2.0), which must be unique within the file. Parts of the fasta name after that character are ignored. Additionally, the fasta name may not contain a '-' or '|'. This requirement is because SignalP converts special characters in sequence names (e.g. '-' is changed to '\_'). ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by SignalP/TargetP. The output of this script is a tab delimited table. Python >= 3.10 is required.
+The script S1\_ASAFind.py in the environment root directory performs the actual prediction. It is called from the script S0_ASAFind.py, which handles the options and generates the optional graphical output. Input data is a Fasta and a companion TargetP v.2.0 (or SignalP 3-5) short format tabular output file, with the complete TargetP header (two lines starting with '#'). Some versions of SignalP/TargetP truncate the sequence names. SignalP-3.0 to 20 characters, and 4.0, 4.1 to 58 characters. Therefore, ASAFind only considers the first corresponding characters of the fasta name (and the first 90 in the case of TargetP 2.0), which must be unique within the file. Parts of the fasta name after that character are ignored. Additionally, the fasta name may not contain a '-' or '|'. This requirement is because SignalP converts special characters in sequence names (e.g. '-' is changed to '\_'). ASAFind requires at least 7 aa upstream and 22 aa downstream of the cleavage site suggested by SignalP/TargetP. The output of this script is a tab delimited table, the log files, the results table and if requested the graphical output are zipped and can be found in the folder 'output'. Please save the results in a different location; each new run of ASAFind will re-write the content of the folder 'output'. Python >= 3.10 is required.
 
 ### python S0\_ASAFind.py --help
 
