@@ -862,9 +862,9 @@ if 'SignalP-5' in signalps['signalp_version']:
 elif 'SignalP-4' in signalps['signalp_version']:
     print('SignalP 4, (Petersen et al., 2011, doi: 10.1038/nmeth.1701)')
 elif 'SignalP-3' in signalps['signalp_version']:
-    print('SignalP 3.0, (Bendtsen et al., 2004, doi:10.1016/j.jmb.2004.05.028)')
+    print('SignalP 3.0, (Bendtsen et al., 2004, doi: 10.1016/j.jmb.2004.05.028)')
 elif 'TargetP-2' in signalps['signalp_version']:
-    print('TargetP 2.0, (Almagro Armenteros et al., 2019, doi:10.26508/lsa.201900429)')
+    print('TargetP 2.0, (Almagro Armenteros et al., 2019, doi: 10.26508/lsa.201900429)')
 
 if web_output:
     print('</PRE>')

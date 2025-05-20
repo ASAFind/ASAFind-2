@@ -38,7 +38,7 @@ The script S1\_ASAFind.py in the environment root directory performs the actual 
 | --- | --- |
 | -h, --help | Show this help message and exit |
 | -f FASTA\_FILE, --fasta\_file FASTA\_FILE | Specify the input fasta FILE. |
-| -p SIGNALP\_FILE, --signalp\_file SIGNALP\_FILE | Specify the input TargetP FILE.. |
+| -p SIGNALP\_FILE, --signalp\_file SIGNALP\_FILE | Specify the input TargetP FILE. |
 | -s SIMPLE\_SCORE\_CUTOFF, --simple\_score\_cutoff SIMPLE\_SCORE\_CUTOFF | Optionally, specify an explicit score cutoff, rather than using ASAFind's default algorithm, not compatible with option -v1. The score given here will not be normalized and therefore should be obtained from a distribution of normalized scores. |
 | -t FASTA\_FILE\_WITH\_MOTIFS, --fasta\_file\_with\_motifs FASTA\_FILE\_WITH\_MOTIFS | Optionally, specify a custom scoring table. The scoring table will be normalized with the maximum score, which allows for processing of non-normalized as well as normalized scoring tables. |
 | -w, --web\_output | Format output for web display. This is mostly useful when called by a web app. |
@@ -63,3 +63,17 @@ The results are zipped and can be found in the folder 'output'. This command in 
 * python S1\_ASAFind.py -f example.fasta -p SignalP5_example_output.txt
 
 In this case, the result table can be found in the same directory from which the script is called (in this example the file name will be 'example.tab'), a log file with a summary can be found in the folder 'temp'. Example SignalP output files are also provided for SignalP 4.1 and SignalP 3, these can be used analogously.
+
+If you use ASAFind in your research please cite our publication (Gruber et al., 2025, <https://doi.org/10.1111/tpj.70138>) as well as the appropriate publications for SignalP or TargetP:
+
+* SignalP 5: Almagro Armenteros et al. 2019, <https://doi.org/10.1038/s41587-019-0036-z>
+* SignalP 4: Petersen et al., 2011, <https://doi.org/10.1038/nmeth.1701>
+* SignalP 3.0: Bendtsen et al., 2004, <https://doi.org/10.1016/j.jmb.2004.05.028>
+* TargetP 2.0: Almagro Armenteros et al., 2019, <https://doi.org/10.26508/lsa.201900429>
+
+Further information on the biological background and on strategies for pre-sequence identification can be found in the following publications: 
+
+* Gruber and Kroth 2024, <https://doi.org/10.1007/978-3-031-57446-7_15>
+* Gruber and Kroth 2017, <https://doi.org/10.1098/rstb.2016.0402>
+* Gruber et al., 2015, <https://doi.org/10.1111/tpj.12734> (original puplication of ASAFind)
+* Gruber and Kroth 2014, <https://doi.org/10.1007/978-1-62703-661-0_12>
