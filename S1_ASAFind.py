@@ -835,24 +835,23 @@ print(f'''The protein scoring threshold for high confidence predictions was {pre
 
 
 print(f'''You submitted {total_proteins} proteins
-{total_proteins-signalp_positive} of your proteins had no signal peptide detected
-{signalp_positive} of your proteins have a signal peptide''')
-if include_ppc_prediction:
-    print(f'''    {ppc_targeted} of these were predicted to go to the periplastidic compartment''')
+{total_proteins-signalp_positive} of your proteins had no signal peptide detected''')
+if signalps['signalp_version'] == 'TargetP-2.0':
+    print(f'''    {signalps['signalp_version']} predicted a mitochondrial transit peptide in {targetp_mtp} proteins, and location = "OTHER" for {targetp_other} proteins''')
+print(f'''{signalp_positive} of your proteins have a signal peptide''')
 print(f'''    {chloroplast_targeted} of these were predicted to go to the plastid''')
 if not simple_score_cutoff:
     print(f'''        {chloroplast_targeted_high} of these were predicted with high confidence
         {chloroplast_targeted_low} of these were predicted with with low confidence''')
 if include_ppc_prediction:
+    print(f'''    {ppc_targeted} of these were predicted to go to the periplastidic compartment''')
+if include_ppc_prediction:
     print(f'''    {chloroplast_not_targeted} of these were predicted not to go to the plastid or PPC''')
 else:
     print(f'''    {chloroplast_not_targeted} of these were predicted not to go to the plastid''')
-
 if skipped_proteins:
     print(f'    {skipped_proteins} of the proteins could not be analyzed because the length is too short')
 
-if signalps['signalp_version'] == 'TargetP-2.0':
-    print(f'''{signalps['signalp_version']} predicted a mitochondrial transit peptide in {targetp_mtp} proteins, and location = "OTHER" for {targetp_other} proteins''')
 
 
 print('''\nCitation: If you use ASAFind in your research please cite our publication (Gruber et al., 2025, doi:10.1111/tpj.70138) as well as the appropriate publications for SignalP or TargetP, you used ''')
