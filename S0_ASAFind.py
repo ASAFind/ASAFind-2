@@ -644,9 +644,9 @@ if not df_cleavage_table['Cleavage position'].isna().all():
                     ww_logo1.ax.text(0.95, 0.95, f"{my_background}", fontsize=12, color='black', ha='right', va='top', transform=ww_logo1.ax.transAxes)
                     
                     try:
-                        ww_logo1.ax2.set_xlabel(f"..position reative to predicted cleavage site is {df_cleavage_table.iloc[protein_iloc]['Cleavage position']}..")
+                        ww_logo1.ax2.set_xlabel(f"Position in sequence, predicted cleavage site is {df_cleavage_table.iloc[protein_iloc]['Cleavage position']}")
                     except KeyError:
-                        ww_logo1.ax2.set_xlabel(f"..position reative to predicted cleavage site is 0..")  
+                        ww_logo1.ax2.set_xlabel(f"Position in sequence, predicted cleavage site is 0")  
                 
                     for tick in  ww_logo1.ax.get_xticklabels():     
                         amino_acid = tick.get_text()
@@ -766,9 +766,9 @@ if not df_cleavage_table['Cleavage position'].isna().all():
                     # Apply the percentage formatter to display y-axis in percentages
                         
                     try:
-                        ww_logo2.ax2.set_xlabel(f"..position in sequence..cleavage position is {df_cleavage_table.iloc[protein_iloc]['Cleavage position']}..")
+                        ww_logo2.ax2.set_xlabel(f"Position in sequence, predicted cleavage position is {df_cleavage_table.iloc[protein_iloc]['Cleavage position']}")
                     except KeyError:
-                        ww_logo2.ax2.set_xlabel(f"..position in sequence..cleavage position is 0..")  
+                        ww_logo2.ax2.set_xlabel(f"Position in sequence, predicted cleavage position is 0")  
                 
                     for tick in  ww_logo2.ax.get_xticklabels():     
                         amino_acid = tick.get_text()
