@@ -11,7 +11,7 @@
 # Contacts:
 # Ansgar Gruber <ansgar.gruber@paru.cas.cz>
 # Marta Vohnoutová <mvohnoutova@prf.jcu.cz>
-#
+
 
 
 
@@ -95,7 +95,7 @@ parser.add_argument('-f', '--fasta_file', help='Specify the input fasta FILE.',
                     required=True)
 
 parser.add_argument('-p', '--signalp_file',
-                    help='Specify the input TargetP FILE.', required=True)
+                    help='Specify the input TargetP or SignalP FILE.', required=True)
 
 parser.add_argument('-s', '--simple_score_cutoff', default=None, type=float,
                     help='Optionally, specify an explicit score cutoff, rather than '
@@ -382,8 +382,10 @@ df_signalp_file.columns.values[0] = 'Hit ID'
 df_signalp_file.columns.values[2] = 'Cleavage position'
 df_signalp_file.columns.values[6] = 'PPC prediction'
 
-##########df_cleavage_table#######################
-columns=['Organism','Protein ID','Hit ID','Full sequence','Motif','Cleavage position','PPC prediction','TargetP-2.0']
+target_signal_column = df_signalp_file.columns[1]  # name of the column with the signal peptide prediction - either signal or target
+
+##########df_cleavage_table##################columns TargetP-2.0 #####
+columns=['Organism','Protein ID','Hit ID','Full sequence','Motif','Cleavage position','PPC prediction',target_signal_column]
 df_cleavage_table=pd.DataFrame(columns=columns)
 protein_id = 0             # in case of unknown fasta file no parsing of header !!! check parsing
 for rec in SeqIO.parse(f"{fasta_all_path}", "fasta"): 
@@ -403,9 +405,9 @@ cleavage_position_map = df_signalp_file.set_index('Hit ID')['PPC prediction'].to
 df_cleavage_table['PPC prediction'] = df_cleavage_table['Hit ID'].map(cleavage_position_map)
 
 # Create a dictionary mapping from Hit ID to Cleavage position in the second table (df2)
-cleavage_position_map = df_signalp_file.set_index('Hit ID')['TargetP-2.0'].to_dict()
+cleavage_position_map = df_signalp_file.set_index('Hit ID')[target_signal_column].to_dict()
 # Map the "Cleavage position" from df2 to df1 based on "Hit ID"
-df_cleavage_table['TargetP-2.0'] = df_cleavage_table['Hit ID'].map(cleavage_position_map)
+df_cleavage_table[target_signal_column] = df_cleavage_table['Hit ID'].map(cleavage_position_map)
 
 # get rid of no signal
 # from here proceed only if at least one cleavage position is found  ### Marta added
