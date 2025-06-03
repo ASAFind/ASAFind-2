@@ -617,7 +617,7 @@ if not df_cleavage_table['Cleavage position'].isna().all():
                     except KeyError:
                         ww_logo1.ax.set_title(f"Protein")
                         
-                    ww_logo1.ax.set_ylabel('bits')
+                    ww_logo1.ax.set_ylabel('Bits')
                 
                     #ww_logo1.ax.set_xlim([-1, len(counts_mat)])
                     try:
